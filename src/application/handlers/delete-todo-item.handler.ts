@@ -9,6 +9,6 @@ export class DeleteTodoItemHandler implements ICommandHandler<DeleteTodoItemComm
   constructor(private readonly todoItemRepository: TodoItemRepository) { }
 
   async execute(command: DeleteTodoItemCommand): Promise<void> {
-    await this.todoItemRepository.delete(command.id);
+    await this.todoItemRepository.delete(command.todoListId, command.id);
   }
 }
