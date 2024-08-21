@@ -3,7 +3,6 @@ import { CommandHandler, ICommandHandler } from '@nestjs/cqrs';
 import { UpdateTodoItemCommand } from '../commands/update-todo-item.command';
 import { TodoItemRepository } from '../../domain/repositories/todo-item.repository';
 import { TodoItem } from '../../domain/entities/todo-item.entity';
-import { Types } from 'mongoose';
 
 @Injectable()
 @CommandHandler(UpdateTodoItemCommand)
